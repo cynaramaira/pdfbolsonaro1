@@ -8,11 +8,15 @@
     <!-- Importação do Tailwind CSS para um design moderno e responsivo -->
     <script src="https://cdn.tailwindcss.com"></script>
     
-    <!-- Configuração de fonte e cores personalizadas (opcional) -->
+    <!-- Configuração de fonte e cores personalizadas com a identidade visual -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
+                    colors: {
+                        'brand-blue': '#024796',
+                        'brand-orange': '#f83d03',
+                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                     },
@@ -38,20 +42,24 @@
 
     <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
 
-        <!-- Cabeçalho da Página -->
-        <header class="bg-white p-6 rounded-xl shadow-md mb-8">
-            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Decisão PET 14129</h1>
-            <p class="text-gray-500 mt-1">Documento oficial do Supremo Tribunal Federal (STF).</p>
+        <!-- Cabeçalho da Página com a Logo -->
+        <header class="bg-white p-6 rounded-xl shadow-md mb-8 flex items-center justify-between flex-wrap gap-4">
+            <div>
+                <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Decisão PET 14129</h1>
+                <p class="text-gray-500 mt-1">Documento oficial do Supremo Tribunal Federal (STF).</p>
+            </div>
+            <img src="https://jamildo.com/media/uploads/logojamildo.png" alt="Logo Jamildo" class="h-10 sm:h-12" onerror="this.style.display='none'">
         </header>
+
 
         <!-- Container Principal do PDF -->
         <main class="bg-white rounded-xl shadow-md overflow-hidden">
             
-            <!-- Controles: Abrir em nova aba e Download -->
+            <!-- Controles: Abrir em nova aba e Download com as novas cores -->
             <div class="p-4 bg-gray-50 border-b border-gray-200 flex flex-wrap gap-3 items-center">
                 <a href="https://jamildo.com/media/uploads/decisao-pet-14129.pdf" 
                    target="_blank" 
-                   class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-brand-blue text-white font-semibold rounded-lg shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-blue transition-opacity">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M4.5 12a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5H8.5a.5.5 0 0 0 0 1H11v5H5V8.5a.5.5 0 0 0-1 0z"/>
                         <path d="M5 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V3H5.5a.5.5 0 0 1-.5-.5"/>
@@ -60,7 +68,7 @@
                 </a>
                 <a href="https://jamildo.com/media/uploads/decisao-pet-14129.pdf" 
                    download 
-                   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors">
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-brand-orange text-white font-semibold rounded-lg shadow-sm hover:opacity-90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-brand-orange transition-opacity">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                         <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
                         <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
@@ -69,9 +77,9 @@
                 </a>
             </div>
 
-            <!-- Estado de Carregamento -->
+            <!-- Estado de Carregamento com a nova cor -->
             <div id="loading-indicator" class="flex flex-col items-center justify-center h-96 text-center p-8">
-                <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin-slow"></div>
+                <div class="w-8 h-8 border-4 border-brand-blue border-t-transparent rounded-full animate-spin-slow"></div>
                 <p class="mt-4 text-lg font-medium text-gray-600">Carregando documento...</p>
                 <p class="text-sm text-gray-500">Isso pode levar alguns segundos.</p>
             </div>
