@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento - Decisão PET 14129</title>
+    
+    <!-- Importação do Tailwind CSS para um design moderno e responsivo -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuração de fonte e cores personalizadas (opcional) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Estilo para a animação do spinner de carregamento */
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin 1.5s linear infinite;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-sans">
+
+    <div class="container mx-auto p-4 sm:p-6 md:p-8 max-w-5xl">
+
+        <!-- Cabeçalho da Página -->
+        <header class="bg-white p-6 rounded-xl shadow-md mb-8">
+            <h1 class="text-2xl md:text-3xl font-bold text-gray-800">Decisão PET 14129</h1>
+            <p class="text-gray-500 mt-1">Documento oficial do Supremo Tribunal Federal (STF).</p>
+        </header>
+
+        <!-- Container Principal do PDF -->
+        <main class="bg-white rounded-xl shadow-md overflow-hidden">
+            
+            <!-- Controles: Abrir em nova aba e Download -->
+            <div class="p-4 bg-gray-50 border-b border-gray-200 flex flex-wrap gap-3 items-center">
+                <a href="https://jamildo.com/media/uploads/decisao-pet-14129.pdf" 
+                   target="_blank" 
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-blue-600 text-white font-semibold rounded-lg shadow-sm hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M4.5 12a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 .5-.5v-6a.5.5 0 0 0-.5-.5H8.5a.5.5 0 0 0 0 1H11v5H5V8.5a.5.5 0 0 0-1 0z"/>
+                        <path d="M5 2.5a.5.5 0 0 1 .5-.5h5a.5.5 0 0 1 .5.5v5a.5.5 0 0 1-1 0V3H5.5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    Abrir Original
+                </a>
+                <a href="https://jamildo.com/media/uploads/decisao-pet-14129.pdf" 
+                   download 
+                   class="inline-flex items-center gap-2 px-4 py-2 bg-gray-600 text-white font-semibold rounded-lg shadow-sm hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                        <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                    </svg>
+                    Download
+                </a>
+            </div>
+
+            <!-- Estado de Carregamento -->
+            <div id="loading-indicator" class="flex flex-col items-center justify-center h-96 text-center p-8">
+                <div class="w-8 h-8 border-4 border-blue-500 border-t-transparent rounded-full animate-spin-slow"></div>
+                <p class="mt-4 text-lg font-medium text-gray-600">Carregando documento...</p>
+                <p class="text-sm text-gray-500">Isso pode levar alguns segundos.</p>
+            </div>
+
+            <!-- Iframe para exibir o PDF (inicialmente oculto) -->
+            <iframe 
+                id="pdf-frame"
+                class="w-full h-[85vh] border-none" 
+                src="https://jamildo.com/media/uploads/decisao-pet-14129.pdf"
+                style="display: none;"
+                title="Visualizador do documento PET 14129 - STF">
+            </iframe>
+
+            <!-- Mensagem de Fallback (erro) -->
+            <div id="fallback-message" class="flex-col items-center justify-center h-96 text-center p-8" style="display: none;">
+                <svg class="w-16 h-16 text-red-500 mx-auto" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 9v3.75m-9.303 3.376c-.866 1.5.217 3.374 1.948 3.374h14.71c1.73 0 2.813-1.874 1.948-3.374L13.949 3.378c-.866-1.5-3.032-1.5-3.898 0L2.697 16.126zM12 15.75h.007v.008H12v-.008z" />
+                </svg>
+                <h3 class="mt-4 text-xl font-bold text-gray-800">Não foi possível carregar o PDF</h3>
+                <p class="mt-2 text-gray-600 max-w-md mx-auto">
+                    O servidor do documento pode não permitir a visualização direta. 
+                    Por favor, use os botões acima para abrir o arquivo em uma nova aba ou fazer o download.
+                </p>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        // Seleciona os elementos do DOM
+        const iframe = document.getElementById('pdf-frame');
+        const loadingIndicator = document.getElementById('loading-indicator');
+        const fallbackMessage = document.getElementById('fallback-message');
+        let hasLoaded = false; // Flag para controlar o estado de carregamento
+
+        // Função para mostrar a mensagem de erro (fallback)
+        const showFallback = () => {
+            if (!hasLoaded) { // Só executa se o iframe ainda não carregou com sucesso
+                loadingIndicator.style.display = 'none';
+                fallbackMessage.style.display = 'flex'; // Usamos flex para centralizar o conteúdo
+                iframe.style.display = 'none';
+            }
+        };
+
+        // Evento disparado quando o iframe carrega com SUCESSO
+        iframe.onload = () => {
+            hasLoaded = true; // Marca que o carregamento foi bem-sucedido
+            loadingIndicator.style.display = 'none';
+            fallbackMessage.style.display = 'none';
+            iframe.style.display = 'block';
+        };
+
+        // Evento disparado quando há um ERRO ao carregar o iframe
+        // Nota: Este evento nem sempre é disparado para erros de cross-origin.
+        iframe.onerror = () => {
+            showFallback();
+        };
+
+        // Mecanismo de segurança (Timeout)
+        // Se após 10 segundos o iframe não tiver carregado (onload não disparou),
+        // assumimos que houve um problema (provavelmente de permissão) e mostramos a mensagem de erro.
+        setTimeout(() => {
+            showFallback();
+        }, 10000); // 10 segundos
+    </script>
+</body>
+</html>
